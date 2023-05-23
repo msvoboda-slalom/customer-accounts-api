@@ -10,7 +10,8 @@ traits:
         type: string
 
 types:
-  CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
+  CustomerAccount: !include /datatypes/CustomerAccount.raml
+  CustomerAccountType: !include /datatypes/CustomerAccountType.raml
   
 /accounts:
   is: [running-user]
@@ -18,6 +19,7 @@ types:
     queryParameters:
       accountType:
         required: false
+        type:
         enum:
           - Personal
           - Business
