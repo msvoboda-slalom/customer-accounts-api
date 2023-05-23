@@ -2,9 +2,14 @@
 
 type: object
 properties:
-  ID?: integer
+  id:
+    type: integer
+    minimum: 1
+    required: false
   name: string
-  accountType: !include /datatypes/CustomerAccountType.raml
+  accountType: !include CustomerAccountType.raml
   address: string
-  airMiles: integer
+  airMiles:
+    type: integer
+    minimum: 0
   creationDate?: datetime
