@@ -5,7 +5,7 @@ types:
   CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
 
 resourceTypes:
-  
+  CustomerAccountsExamples: !include /examples/CustomerAccountsExamples.raml
 
 /accounts:
   get:
@@ -31,6 +31,11 @@ resourceTypes:
               output: !include /examples/CustomerAccountsResponseExample.raml
 
   post:
+    queryParameters:
+      Requestor:
+        description: The person or system requesting data
+        required: true
+        type: string
     body:
       application/json:
         type: CustomerAccount[]
