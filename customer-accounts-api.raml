@@ -2,7 +2,7 @@
 title: Customer Accounts API
 
 types:
-  customerAccount
+  CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
 
 /accounts:
   get:
@@ -23,4 +23,4 @@ types:
       200:
         body:
           application/json:
-            output: !include 
+            type: CustomerAccount[]
