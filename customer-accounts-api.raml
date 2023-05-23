@@ -10,5 +10,9 @@ title: Customer Accounts API
         type: string
       Account Type:
         required: false
-        type: array
-        
+        enum:
+          - Personal
+          - Business
+      Customer Name:
+        required: false
+        type: string
