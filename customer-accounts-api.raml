@@ -4,6 +4,8 @@ title: Customer Accounts API
 types:
   CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
 
+exm
+
 /accounts:
   get:
     queryParameters:
@@ -32,5 +34,5 @@ types:
       application/json:
         type: CustomerAccount[]
         examples:
-          output: !include /examples/CustomerAccountsRequestExample.raml
+          output: !include /examples/CustomerAccountsExamples.raml
 
