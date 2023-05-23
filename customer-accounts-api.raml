@@ -16,7 +16,7 @@ types:
         enum:
           - Personal
           - Business
-      Customer Name:
+      customer:
         required: false
         type: string
     responses:
@@ -29,7 +29,7 @@ types:
 
   post:
     queryParameters:
-      Requestor:
+      user:
         description: The person or system requesting data
         required: true
         type: string
