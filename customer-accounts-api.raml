@@ -2,11 +2,12 @@
 title: Customer Accounts API
 
 traits:
-  queryParameters:
-    user:
-      description: The person or system requesting data
-      required: true
-      type: string
+  running-user:
+    queryParameters:
+      user:
+        description: The person or system requesting data
+        required: true
+        type: string
 
 types:
   CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
@@ -14,7 +15,7 @@ types:
 /accounts:
   get:
     queryParameters:
-      user: [running-user]
+      [running-user]
       accountType:
         required: false
         enum:
