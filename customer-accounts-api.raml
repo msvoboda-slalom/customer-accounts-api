@@ -2,12 +2,10 @@
 title: Customer Accounts API
 
 traits:
-  initiator:
-    queryParameters:
-      user:
-        description: The person or system requesting data
-        required: true
-        type: string
+  user:
+    description: The person or system requesting data
+    required: true
+    type: string
 
 types:
   CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
@@ -15,10 +13,7 @@ types:
 /accounts:
   get:
     queryParameters:
-      user:
-        description: The person or system requesting data
-        required: true
-        type: string
+      is: [user]
       accountType:
         required: false
         enum:
