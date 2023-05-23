@@ -13,9 +13,9 @@ types:
   CustomerAccount: !include /datatypes/CustomerAccountDataType.raml
   
 /accounts:
+  is: [running-user]
   get:
     queryParameters:
-      [running-user]
       accountType:
         required: false
         enum:
