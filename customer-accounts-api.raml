@@ -38,4 +38,10 @@ types:
         type: CustomerAccount[]
         examples:
           output: !include /examples/CustomerAccountsRequestExample.raml
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              message: Accounts created
 
