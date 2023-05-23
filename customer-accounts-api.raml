@@ -28,15 +28,8 @@ types:
               output: !include /examples/CustomerAccountsExample.raml
 
   post:
-    queryParameters:
-      Requestor:
-        description: The person or system requesting data
-        required: true
-        type: string
-      Account Type:
-        required: false
-        enum:
-          - Personal
-          - Business
+    body:
+      application/json:
+        type: CustomerAccount[]
 
 
