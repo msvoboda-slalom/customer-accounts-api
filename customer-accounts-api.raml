@@ -8,7 +8,7 @@ traits:
         description: The person or system requesting data
         required: true
         type: string
-        default: ME
+        default: System
 
 types:
   CustomerAccount: !include /datatypes/CustomerAccount.raml
@@ -52,7 +52,7 @@ types:
               
   /{id}:
     is: [running-user]
-    get:
+    get:        
       responses:
         200:
           body:
@@ -60,3 +60,8 @@ types:
               type: CustomerAccount
               examples:
                 output: !include /examples/CustomerAccountIdResponseExample.raml
+        404:
+          body:
+            application/json:
+              example:
+                message: Account not found
