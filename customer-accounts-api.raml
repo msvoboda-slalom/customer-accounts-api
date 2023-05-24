@@ -49,3 +49,17 @@ types:
           application/json:
             example:
               message: Accounts created
+              
+  /{id}:
+    get:
+      queryParameters:
+        id:
+          required: true
+          type: string
+      responses:
+        200:
+          body:
+            application/json:
+              type: CustomerAccount
+              example:
+                output: !include /examples/CustomerAccountIdResponseExample.raml
