@@ -4,7 +4,7 @@
   "classifier" : "raml",
   "tags" : [ ],
   "groupId" : "90a7c6bb-9053-413d-9b53-66c88a360015",
-  "assetId" : "customer-accounts-api",
+  "assetId" : "customer-accounts-api-svoboda",
   "version" : "1.0.0",
   "apiVersion" : "v1",
   "dependencies" : [ ],
